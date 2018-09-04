@@ -1,0 +1,62 @@
+* {
+  padding: 0px;
+  margin: 0px;
+}
+#container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#container .wraper {
+  overflow: hidden;
+  height: 180px;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+#container .wraper .btn {
+  height: 20px;
+  width: 30px;
+  position: absolute;
+  z-index: 10;
+}
+#container .wraper .prev-btn {
+  left: 0px;
+}
+#container .wraper .next-btn {
+  right: 0px;
+}
+#container .wraper .wrap-item {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+#container .wraper .wrap-item .wrap-item-img {
+  position: absolute;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  transition-duration: 600ms;
+}
+#container .wraper .wrap-item .wrap-item-img img {
+  width: 100%;
+}
+#container .wraper .wrap-item .previous {
+  transform: translateX(-100%);
+  z-index: 1;
+  opacity: 0;
+}
+#container .wraper .wrap-item .current {
+  opacity: 1;
+  transform: translateX(0%);
+  z-index: 2;
+}
+#container .wraper .wrap-item .next {
+  opacity: 0;
+  transform: translateX(100%);
+  z-index: 1;
+}
